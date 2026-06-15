@@ -1,0 +1,148 @@
+/* NARRATIVE PANEL */
+.narrative-panel {
+  background-color: #f0f0f0;
+  padding: 2.5rem clamp(1rem, 10vw, 20rem);
+  box-sizing: border-box;
+}
+
+.narrative-panel .content {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* SECTION TITLE */
+.narrative-panel .content > h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--calcite-ui-text-1);
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--calcite-ui-brand);
+  display: inline-block;
+}
+
+/* METRICS GRID */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  min-width: 0;
+  width: 100%;
+}
+
+/* CARD WRAPPER */
+.card-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.card-wrapper:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.13);
+}
+
+/* CALCITE OVERRIDES */
+calcite-panel {
+  --calcite-panel-padding: 0.5rem;
+}
+
+calcite-card {
+  --calcite-ui-foreground-1: #ffffff;
+  --calcite-ui-border-1: transparent;
+  --calcite-ui-border-2: transparent;
+  min-width: 0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* CARD TEXT */
+calcite-card h1 {
+  margin: 0.25rem 0 0 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--calcite-ui-brand);
+  line-height: 1.1;
+}
+
+calcite-card h2 {
+  margin: 0.25rem 0 0 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--calcite-ui-brand);
+  line-height: 1.2;
+}
+
+calcite-card h3 {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  opacity: 0.55;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+calcite-card p {
+  margin: 0.15rem 0 0 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* STORY TEXT */
+.narrative-content {
+  line-height: 1.8;
+  color: var(--calcite-ui-text-1);
+  font-size: 1rem;
+
+  padding: 1.5rem;
+}
+
+.narrative-content p {
+  margin: 0 0 1rem 0;
+}
+
+.narrative-content p:last-child {
+  margin-bottom: 0;
+}
+
+.narrative-content strong {
+  color: var(--calcite-ui-brand);
+  font-weight: 600;
+}
+
+/* FOOTER */
+.narrative-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  border-top: 1px solid var(--calcite-ui-border-1, #ddd);
+  padding-top: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.footer-block h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0.55;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.footer-block p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--calcite-ui-text-1);
+}
+
+/* CHIPS */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}

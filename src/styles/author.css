@@ -1,0 +1,61 @@
+/* AUTHOR FOOTER */
+.author {
+  background-color: var(--calcite-ui-foreground-2);
+  border-top: 1px solid var(--calcite-ui-border-1);
+  box-sizing: border-box;
+  margin-top: 5rem;
+  padding: 5rem 20rem;
+}
+
+.author-context {
+  padding-bottom: 5rem;
+}
+
+/* INNER LAYOUT */
+.author-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* LEFT: identity */
+.author-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0;
+  margin: 0;
+}
+
+.author-identity h2,
+.author-identity p {
+  padding: 0;
+  margin: 0;
+}
+
+.author-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* CENTER: links */
+.author-links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.author-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--calcite-sans-family);
+  font-size: var(--calcite-font-size--1);
+  font-weight: var(--calcite-font-weight-medium);
+  color: var(--calcite-ui-brand);
+  border-radius: var(--calcite-border-radius);
+  background-color: var(--calcite-ui-foreground-1);
+}

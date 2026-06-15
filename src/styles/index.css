@@ -1,0 +1,31 @@
+@import url("./hero.css");
+@import url("./narrative.css");
+@import url("./imageSection.css");
+@import url("./author.css");
+
+#root,
+html,
+body {
+  background-color: var(--calcite-ui-foreground-2);
+  height: 100%;
+  margin: 0;
+}
+
+calcite-shell {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-section,
+.hero,
+.narrative-panel,
+.author {
+  height: auto;
+  flex-shrink: 0;
+}
+
+.map-one {
+  flex-shrink: 0;
+  min-height: 100vh;
+}
