@@ -1,13 +1,11 @@
 export default function Author() {
   return (
     <section className="author">
-      {/* 1. Prompt */}
       <div className="author-context">
         <h1>Got any question?</h1>
         <p>Feel free to connect with me</p>
       </div>
 
-      {/* 2. Identity */}
       <div className="author-inner">
         <div className="author-identity">
           <calcite-icon icon="user" />
@@ -16,7 +14,6 @@ export default function Author() {
           <p>Tagum - Philippines</p>
         </div>
 
-        {/* 3. Contact links stacked */}
         <div className="author-links">
           <div>
             <calcite-icon icon="web" />

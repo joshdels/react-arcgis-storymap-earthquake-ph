@@ -2,7 +2,7 @@
 .image-section {
   position: relative;
   background-color: var(--calcite-ui-foreground-2);
-  padding: 5rem;
+  padding: 1rem clamp(1rem, 5vw, 8rem);
 }
 
 /* CAROUSEL */

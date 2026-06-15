@@ -1,95 +1,52 @@
 import { useState } from "react";
 
-// Individual imports for each Map, Chart and Calcite component
-import "@arcgis/map-components/components/arcgis-expand";
 import "@arcgis/map-components/components/arcgis-legend";
 import "@arcgis/map-components/components/arcgis-map";
-import "@arcgis/map-components/components/arcgis-search";
 import "@arcgis/map-components/components/arcgis-zoom";
-import "@arcgis/charts-components/components/arcgis-chart";
 import "@esri/calcite-components/components/calcite-shell";
 import "@esri/calcite-components/components/calcite-navigation";
-import "@esri/calcite-components/components/calcite-navigation-logo";
+import "@arcgis/map-components/components/arcgis-fullscreen";
 
-// Import modules and types from the SDK's core API
-import Graphic from "@arcgis/core/Graphic.js";
-import Point from "@arcgis/core/geometry/Point.js";
-import SimpleMarkerSymbol from "@arcgis/core/symbols/SimpleMarkerSymbol.js";
-import SimpleLineSymbol from "@arcgis/core/symbols/SimpleLineSymbol.js";
-import type WebMap from "@arcgis/core/WebMap";
-
-export function MapOne(): React.JSX.Element {
-  const [navHeading, setNavHeading] = useState("");
-  const [navDescription, setNavDescription] = useState("");
+export default function MapOne(): React.JSX.Element {
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleViewReady = (event: CustomEvent): void => {
     const viewElement = event.target as HTMLArcgisMapElement;
 
-    // Use metadata from the Web Map to populate the header
-    const map = viewElement.map as WebMap;
-    const portalItem = map.portalItem;
-    const title = portalItem?.title ? portalItem.title : "A web map";
-    const description = portalItem?.description
-      ? portalItem.description
-      : "ArcGIS Maps SDK for JavaScript template hehehe";
-
-    setNavHeading(title);
-    setNavDescription(description);
-
-    // Define a point geometry
-    const point = new Point({
-      longitude: -98.38,
-      latitude: 38.34,
+    const view = viewElement.view;
+    view.goTo({
+      center: [220.0, 10.0],
+      zoom: 3,
     });
 
-    // Create an outline for the marker symbol
-    const outline = new SimpleLineSymbol({
-      color: "white",
-      width: 2,
-    });
-
-    // Create a symbol for drawing the point
-    const symbol = new SimpleMarkerSymbol({
-      style: "triangle",
-      size: 20,
-      color: "red",
-      outline,
-    });
-
-    // Create a graphic and add the geometry and symbol to it
-    const pointGraphic = new Graphic({
-      geometry: point,
-      symbol,
-    });
-
-    // Add a graphic to demonstrate custom visualizations beyond Web Map content
-    viewElement.graphics.add(pointGraphic);
+    setIsLoading(false);
   };
 
   return (
-    // The Shell component is used as a layout for this template
     <>
       <section className="map-one">
-        <calcite-navigation slot="header">
-          {/* Heading and description dynamically populated */}
-          <calcite-navigation-logo
-            heading={navHeading}
-            description={navDescription}
-            heading-level="1"
-            slot="logo"
-          ></calcite-navigation-logo>
-        </calcite-navigation>
+        <div className="text">
+          <h1>Plate tectonics and ring of fire mapping</h1>
+          <p>Credits to: bktanner_UWM</p>
+        </div>
+
+        {isLoading && (
+          <div className="map-loader-overlay">
+            <calcite-loader
+              label="Loading map..."
+              text="Loading Ring of Fire map..."
+            />
+          </div>
+        )}
 
         <arcgis-map
-          item-id="dd4b2f25487d4a37a45093ba6acd026d"
+          item-id="3e6ed761b0e74e8c93b477416cf909d2"
           onarcgisViewReadyChange={handleViewReady}
+          className="map"
         >
           <arcgis-zoom slot="top-left" />
-          <arcgis-search slot="top-right" />
-          <arcgis-expand slot="bottom-left">
-            <arcgis-legend></arcgis-legend>
-          </arcgis-expand>
-          {/*  A Feature Layer in the Web Map has an associated chart (layer-item-id) */}
+          <arcgis-fullscreen slot="top-left"></arcgis-fullscreen>
+          <arcgis-legend slot="bottom-left"></arcgis-legend>
         </arcgis-map>
       </section>
     </>

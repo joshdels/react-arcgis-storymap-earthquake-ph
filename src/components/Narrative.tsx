@@ -14,9 +14,9 @@ export default function NarrativeSection() {
         </calcite-card>
 
         <calcite-card>
-          <h3 slot="heading">Time (UTC)</h3>
-          <h2>11:37 PM</h2>
-          <p>June 7, 2026</p>
+          <h3 slot="heading">Time (GMT+8)</h3>
+          <h2>7:37 AM</h2>
+          <p>June 8, 2026</p>
         </calcite-card>
 
         <calcite-card>
@@ -40,20 +40,22 @@ export default function NarrativeSection() {
       <div className="narrative-content">
         <p>
           A magnitude 7.8 earthquake struck the southern coast of Mindanao at
-          11:37 p.m. UTC on June 7, 2026, causing widespread damage across
-          multiple regions of southern Philippines.
+          7:37 am GMT+8 (Manila Time) on June 8, 2026, causing widespread damage
+          across multiple regions of southern Philippines.
         </p>
 
         <p>
-          According to USGS, the epicenter was approximately 16 miles
-          west-southwest of Kablalan at a depth of 55 km, resulting in strong
-          regional shaking due to thrust faulting near major trench systems.
+          According to United States Geological Survey (USGS), the epicenter was
+          approximately 16 miles west-southwest of Kablalan at a depth of 55 km,
+          resulting in strong regional shaking due to thrust faulting near major
+          trench systems.
         </p>
 
         <p>
-          PHIVOLCS recorded a maximum intensity of{" "}
-          <strong>MMI VIII (Severe)</strong>, with shaking lasting ~30 seconds
-          and triggering over 180 aftershocks including a M6.5 event.
+          Philippine Institute of Volcanology and Seismology (PHIVOLCS) recorded
+          a maximum intensity of <strong>MMI VIII (Severe)</strong>, with
+          shaking lasting ~30 seconds and triggering over 180 aftershocks
+          including a M6.5 event.
         </p>
       </div>
 

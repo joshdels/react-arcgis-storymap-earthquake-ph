@@ -1,34 +1,38 @@
 # ArcGIS Maps SDK for JavaScript Vite React 19 TSX template
 
-📁 **[Click here to download this directory as a ZIP file](https://esri.github.io/jsapi-resources/zips/js-maps-sdk-react.zip)** 📁
+## Note
 
-This template demonstrates how to use the [ArcGIS Maps SDK for JavaScript](https://developers.arcgis.com/javascript/latest/) in a Vite React 19 TSX application.
+This is a contribution information awareness for what happend to the Southern Philippines 7.8 Earthquake.
+It uses
 
-## Get started
+Headlines
+![Headlines](public/image.png)
 
-To quickly scaffold a new application using this template, run the following command in your terminal:
+Epicenter
+![Epicenter](public/image-1.png)
 
-```bash
-npx @arcgis/create -n my-arcgis-app -t react
+Ring of Fire
+![Ring of Fire](public/image-2.png)
+
+## Tech Stack
+
+1. React
+2. Typescript
+3. ArcGIS SDK JS
+4. ESRI Calcite
+5. Vercel
+
+## Getting started
+
+```
+npm install
+npm run dev
 ```
 
-This template uses the following packages:
+## Data Sources
 
-- [`@arcgis/core`](https://www.npmjs.com/package/@arcgis/core)
-- [`@arcgis/map-components`](https://www.npmjs.com/package/@arcgis/map-components)
-- [`@arcgis/charts-components`](https://www.npmjs.com/package/@arcgis/charts-components)
-- [`@esri/calcite-components`](https://www.npmjs.com/package/@esri/calcite-components)
+plate tectonics
+https://www.arcgis.com/home/item.html?id=3e6ed761b0e74e8c93b477416cf909d2
 
-## TypeScript
-
-This template is configured to use TypeScript. If you prefer to use JavaScript, you can:
-
-- Remove the `tsconfig.json` file
-- Update the file extensions from `.tsx` to `.jsx`
-- Remove the `vite.env.d.ts` file
-- Remove the `typescript` dependency from `package.json`
-- Remove the `@types/node`, `@types/react` and `@types/react-dom` dev dependencies from `package.json`
-
-## Resources
-
-See the [Get started with npm guide](https://developers.arcgis.com/javascript/latest/get-started/#use-arcgiscreate) for full instructions.
+seismic earthquake
+https://www.arcgis.com/home/item.html?id=31cfc5b138e24dee866c457948773ac4
