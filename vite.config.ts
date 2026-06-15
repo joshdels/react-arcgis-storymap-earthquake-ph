@@ -7,6 +7,15 @@ export default defineConfig({
   server: {
     open: true,
   },
+
+  optimizeDeps: {
+    include: [
+      "@arcgis/core",
+      "@arcgis/map-components",
+      "@esri/calcite-components",
+    ],
+  },
+
   build: {
     outDir: "dist",
   },
