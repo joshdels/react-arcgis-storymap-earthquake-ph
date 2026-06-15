@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import "@arcgis/map-components/components/arcgis-expand";
 import "@arcgis/map-components/components/arcgis-legend";
 import "@arcgis/map-components/components/arcgis-map";
 import "@arcgis/map-components/components/arcgis-zoom";
@@ -46,7 +47,9 @@ export default function MapOne(): React.JSX.Element {
         >
           <arcgis-zoom slot="top-left" />
           <arcgis-fullscreen slot="top-left"></arcgis-fullscreen>
-          <arcgis-legend slot="bottom-left"></arcgis-legend>
+          <arcgis-expand slot="bottom-left">
+            <arcgis-legend></arcgis-legend>
+          </arcgis-expand>
         </arcgis-map>
       </section>
     </>

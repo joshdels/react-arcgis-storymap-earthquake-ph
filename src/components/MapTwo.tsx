@@ -46,7 +46,9 @@ export default function MapTwo(): React.JSX.Element {
           <arcgis-zoom slot="top-left" />
           <arcgis-fullscreen slot="top-left"></arcgis-fullscreen>
 
-          <arcgis-legend slot="bottom-left"></arcgis-legend>
+          <arcgis-expand slot="bottom-left">
+            <arcgis-legend></arcgis-legend>
+          </arcgis-expand>
         </arcgis-map>
       </section>
     </>
